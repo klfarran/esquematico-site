@@ -1,0 +1,75 @@
+﻿
+   
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px; /* Offset the main content to the right of the sidebar */
+    margin-top: 40px;
+    position: relative;
+}
+
+.sidebar {
+    top: 40px;
+    left: 0;
+    height: calc(100vh - 40px); /* Sidebar height minus navbar */
+    z-index: 2; /* Sidebar on top of the content */
+    width: 250px;
+    position: fixed;
+    background-color: #A0B4E1;
+    color: white;
+    padding-top: 20px;
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+/* Style the scrollbar itself */
+.sidebar::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+/* Style the track (the part the scrollbar moves along) */
+.sidebar::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Light gray track */
+    border-radius: 10px;
+}
+
+/* Style the thumb (the draggable part of the scrollbar) */
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #728FCE; /* Same color as your sidebar */
+    border-radius: 10px;
+    border: 2px solid #f1f1f1; /* Optional: adds a border around the thumb */
+}
+
+/* Change the thumb when hovering */
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #4c6ab0; /* Darker shade when hovering */
+}
+
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+}
+
+.sidebar .nav-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.jtron {
+    margin-top:15px;
+    padding: 20px 0;
+    position: relative;
+}
+
+.sdbar .nav-link {
+    font-size:14px;
+}
+
+
+
