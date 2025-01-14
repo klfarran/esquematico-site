@@ -49,7 +49,7 @@
          <div class="container">
           <a class="navbar-brand" runat="server" href="~/Inicio">
               <img src="images/lambdawhite.png" alt="Logo" style="width: 30px; height: auto; margin-right:20px; margin-left:-45px;">
-              eschemántico!
+              esquemático!
           </a>
           
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -83,7 +83,6 @@
                 <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definiciones#sea">sea</a></li>
                 <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definiciones#sea*">sea*</a></li>
                 <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definiciones#¡establezca!">¡establezca!</a></li>
-                <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definiciones#cita">cita</a></li>
               </ul>
             </li>
 
@@ -91,12 +90,12 @@
              <div class="dropdown">
               <a class="sdbar triangle nav-link" data-bs-toggle="collapse" href="#comparisonSubmenu" aria-expanded="false" 
                 aria-controls="comparisonSubmenu"> ▼ </a>
-             <a class="sdbar nav-link" runat="server" href="~/Definiciones">comparación e igualdad</a>
+             <a class="sdbar nav-link" runat="server" href="~/Comparaciones">comparación e igualdad</a>
             </div>
            <ul class="nav flex-column ms-3 collapse" id="comparisonSubmenu">
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿ig?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿igv?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿igual?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Comparaciones#¿igual%3F">¿igual?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Comparaciones#¿igv%3F">¿igv?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Comparaciones#¿ig%3F">¿ig?</a></li>
           </ul>
         </li>
 
@@ -104,21 +103,18 @@
              <div class="dropdown">
               <a class="sdbar triangle nav-link" data-bs-toggle="collapse" href="#conditionalsSubmenu" aria-expanded="false" 
                 aria-controls="conditionalsSubmenu"> ▼ </a>
-             <a class="sdbar nav-link" runat="server" href="~/Definiciones">potenciales</a>
+             <a class="sdbar nav-link" runat="server" href="~/Potenciales">potenciales</a>
             </div>
           <ul class="nav flex-column ms-3 collapse" id="conditionalsSubmenu">
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">cierto</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">falso</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">si</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">sino</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">y</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">o</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">condición</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿nulo?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿falso?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿cierto?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿booleano?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿inmutable?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#cierto">cierto</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#falso">falso</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#si">si</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#condición">condición</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#sino">sino</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#y">y</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#o">o</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#¿falso%3F">¿falso?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#¿cierto%3F">¿cierto?</a></li>
           </ul>
         </li>
 
@@ -126,34 +122,34 @@
             <div class="dropdown">
               <a class="sdbar triangle nav-link" data-bs-toggle="collapse" href="#numericsSubmenu" aria-expanded="false" 
                 aria-controls="numericsSubmenu"> ▼ </a>
-             <a class="sdbar nav-link" runat="server" href="~/Definiciones">aritmética</a>
+             <a class="sdbar nav-link" runat="server" href="~/Aritmética">aritmética</a>
             </div>
           <ul class="nav flex-column ms-3 collapse" id="numericsSubmenu">
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">más</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">menos</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">mult</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">div</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿número?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿número-entero?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿cero?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿positivo?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿negativo?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿número-par?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿número-impar?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">menos-de</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">más-de</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">raíz-cuadrada</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">expo</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">máx</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">mín</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">val-abso</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">cociente</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">residuo</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">cociente/residuo</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">módulo</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">redondear</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">truncar</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">signo</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#más">más</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#menos">menos</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#mult">mult</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#div">div</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número%3F">¿número?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número-entero%3F">¿número-entero?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿cero%3F">¿cero?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿positivo%3F">¿positivo?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿negativo%3F">¿negativo?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número-par%3F">¿número-par?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número-impar%3F">¿número-impar?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#menos-de">menos-de</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#más-de">más-de</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#raíz-cuadrada">raíz-cuadrada</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#expo">expo</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#máx">máx</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#mín">mín</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#val-abso">val-abso</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#cociente">cociente</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#residuo">residuo</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#cociente/residuo">cociente/residuo</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#módulo">módulo</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#redondear">redondear</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#truncar">truncar</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#signo">signo</a></li>
           </ul>
         </li>
 
@@ -161,13 +157,14 @@
             <div class="dropdown">
               <a class="sdbar triangle nav-link" data-bs-toggle="collapse" href="#stringsSubmenu" aria-expanded="false" 
                 aria-controls="stringsSubmenu"> ▼ </a>
-             <a class="sdbar nav-link" runat="server" href="~/Definiciones">cadenas</a>
+             <a class="sdbar nav-link" runat="server" href="~/Cadenas">cadenas</a>
             </div>
           <ul class="nav flex-column ms-3 collapse" id="stringsSubmenu">
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿cadena?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">longitud-de-cadena</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">subcadena</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">concatenar-cadena</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#¿cadena%3F">¿cadena?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#¿inmutable%3F">¿inmutable?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#longitud-de-cadena">longitud-de-cadena</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#subcadena">subcadena</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#concatenar-cadena">concatenar-cadena</a></li>
           </ul>
         </li>
 
@@ -175,14 +172,15 @@
             <div class="dropdown">
               <a class="sdbar triangle nav-link" data-bs-toggle="collapse" href="#typesSubmenu" aria-expanded="false" 
                 aria-controls="typesSubmenu"> ▼ </a>
-             <a class="sdbar nav-link" runat="server" href="~/Definiciones">tipos</a>
+             <a class="sdbar nav-link" runat="server" href="~/Tipos">tipos</a>
             </div>
           <ul class="nav flex-column ms-3 collapse" id="typesSubmenu">
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿átomo?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿símbolo?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿carácter?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿booleano?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿inmutable?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿átomo%3F">¿átomo?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿símbolo%3F">¿símbolo?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿carácter%3F">¿carácter?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿booleano%3F">¿booleano?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿cadena%3F">¿cadena?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿inmutable%3F">¿inmutable?</a></li>
           </ul>
         </li>
 
@@ -190,25 +188,26 @@
             <div class="dropdown">
               <a class="sdbar triangle nav-link" data-bs-toggle="collapse" href="#listasSubmenu" aria-expanded="false" 
                 aria-controls="listasSubmenu"> ▼ </a>
-             <a class="sdbar nav-link" runat="server" href="~/Definiciones">listas</a>
+             <a class="sdbar nav-link" runat="server" href="~/Listas">listas</a>
             </div>
           <ul class="nav flex-column ms-3 collapse" id="listasSubmenu">
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">combinar</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">lista</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿lista?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">¿par?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">longitud</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">concatenar</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">pri</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">prri</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">prrri</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">prrrri</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">res</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">ress</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">resss</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">ressss</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">pres</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#">resp</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#combinar">combinar</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#lista">lista</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#¿lista%3F">¿lista?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#¿par%3F">¿par?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#¿nulo%3F">¿nulo?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#longitud">longitud</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#concatenar">concatenar</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#pri">pri</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#prri">prri</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#prrri">prrri</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#prrrri">prrrri</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#res">res</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#ress">ress</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#resss">resss</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#ressss">ressss</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#pres">pres</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#resp">resp</a></li>
           </ul>
         </li>
 
@@ -221,7 +220,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p> <%: DateTime.Now.Year %> - eschemántico!</p>
+                <p> <%: DateTime.Now.Year %> - esquemático!</p>
             </footer>
         </div>
 
@@ -272,15 +271,21 @@
             codeElements.forEach(codeElement => {
                 const html = codeElement.innerHTML;
 
-                let updatedhtml = html.replace(/¿.*\?/g, '<span class="identifier">$&</span>'); //anything that starts with ¿ and ends with ? is an identifier
+                let updatedhtml = html.replace(/¿.*\?/g, '<span class="identifier">$&</span>'); //Anything that starts with ¿ and ends with ? is an identifier
                 updatedhtml = updatedhtml.replace(/<span class="token function">definir<\/span>/g, '<span class="keyw">definir</span>');
                 updatedhtml = updatedhtml.replace(/'/g, '<span class="symb">\'</span>');
-                updatedhtml = updatedhtml.replace(/cierto/g, '<span class="identifier">cierto</span>');
-                updatedhtml = updatedhtml.replace(/falso/g, '<span class="identifier">falso</span>');
+                updatedhtml = updatedhtml.replace(/cierto/g, '<span class="bool">cierto</span>');
+                updatedhtml = updatedhtml.replace(/falso/g, '<span class="bool">falso</span>');
                 updatedhtml = updatedhtml.replace(/lista/g, '<span class="identifier">lista</span>');
+                updatedhtml = updatedhtml.replace(/aaquí/g, '<span class="identifier">aquí</span>');
                 updatedhtml = updatedhtml.replace(/g-t/g, '<span class="g-t">></span>');
-                updatedhtml = updatedhtml.replace(/x/g, '<span class="identifier">x</span>');
+                updatedhtml = updatedhtml.replace(/xx/g, '<span class="identifier">x</span>');
+                updatedhtml = updatedhtml.replace(/yy/g, '<span class="identifier">y</span>');
                 updatedhtml = updatedhtml.replace(/l-t/g, '<span class="l-t"><</span>');
+                updatedhtml = updatedhtml.replace(/#lang scheme/g, '<span class="black">#lang scheme</span>');
+                updatedhtml = updatedhtml.replace(/scheme-traductor\/scheme-traductor/g, '<span class="black">scheme-traductor/scheme-traductor</span>');
+                updatedhtml = updatedhtml.replace(/nno hay un número máximo/g, '<span class="red">. . no hay un número máximo</span>');
+                updatedhtml = updatedhtml.replace(/número-máximo/g, '<span class="identifier">número-máximo</span>');
 
                 codeElement.innerHTML = updatedhtml;
             });

@@ -17,6 +17,12 @@
 
      <link rel="stylesheet" href="sitestyles.css" />
 
+    <!--prism.js for formatting-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-scheme.min.js"></script>
+    <script src="prism.js"></script>
+
 </head> 
 <body>
     <form runat="server">
@@ -43,7 +49,10 @@
       <!-- Navbar -->
        <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #627ABC;">
          <div class="container">
-          <a class="navbar-brand" runat="server" href="~/Home">eschemántico!</a>
+          <a class="navbar-brand" runat="server" href="~/Home">
+              <img src="images/lambdawhite.png" alt="Logo" style="width: 30px; height: auto; margin-right:20px; margin-left:-45px;">
+               esquemático!
+          </a>
           
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav w-100">
@@ -58,23 +67,22 @@
          </div>
        </nav>
 
-        <!-- Sidebar -->
+        <!-- Sidebar 
     <div class="sidebar">
       <ul class="nav flex-column">
         <li class="nav-item">
             <div class="dropdown">
               <a class="sdbar triangle nav-link" data-bs-toggle="collapse" href="#definitionsSubmenu" aria-expanded="false" 
                 aria-controls="definitionsSubmenu"> ▼ </a>
-             <a class="sdbar nav-link" runat="server" href="~/Definiciones">definitions</a>
+             <a class="sdbar nav-link" runat="server" href="~/Definitions">definitions</a>
             </div>
            <ul class="nav flex-column ms-3 collapse" id="definitionsSubmenu">
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>definir</strong> (define)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>rastrear</strong> (trace)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>rastrear-definir</strong> (trace-define)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>sea</strong> (let)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>sea*</strong> (let*)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¡establezca!</strong> (set!)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>cita</strong> (quote)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definitions#define"><strong>definir</strong> (define)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definitions#trace"><strong>rastrear</strong> (trace)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definitions#trace-define"><strong>rastrear-definir</strong> (trace-define)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definitions#let"><strong>sea</strong> (let)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definitions#let*"><strong>sea*</strong> (let*)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definitions#set!"><strong>¡establezca!</strong> (set!)</a></li>
           </ul>
         </li>
 
@@ -85,9 +93,9 @@
              <a class="sdbar nav-link" runat="server" href="~/Definiciones">comparison</a>
             </div>
            <ul class="nav flex-column ms-3 collapse" id="comparisonSubmenu">
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿ig?</strong> (eq?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿igv?</strong> (eqv?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿igual?</strong> (equal?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿ig?</strong> (eq?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿igv?</strong> (eqv?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿igual?</strong> (equal?)</a></li>
           </ul>
         </li>
 
@@ -98,18 +106,18 @@
              <a class="sdbar nav-link" runat="server" href="~/Definiciones">conditionals</a>
             </div>
           <ul class="nav flex-column ms-3 collapse" id="conditionalsSubmenu">
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>cierto</strong> (true)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>falso</strong> (false)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>si</strong> (if)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>sino</strong> (else)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>y</strong> (and)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>o</strong> (or)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>condición</strong> (cond)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿nulo?</strong> (null?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿falso?</strong> (false?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿cierto?</strong> (true?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿booleano?</strong> (boolean?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿inmutable?</strong> (immutable?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>cierto</strong> (true)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>falso</strong> (false)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>si</strong> (if)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>sino</strong> (else)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>y</strong> (and)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>o</strong> (or)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>condición</strong> (cond)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿nulo?</strong> (null?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿falso?</strong> (false?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿cierto?</strong> (true?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿booleano?</strong> (boolean?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿inmutable?</strong> (immutable?)</a></li>
           </ul>
         </li>
 
@@ -120,31 +128,31 @@
              <a class="sdbar nav-link" runat="server" href="~/Definiciones">numerics</a>
             </div>
           <ul class="nav flex-column ms-3 collapse" id="numericsSubmenu">
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>más</strong> (+)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>menos</strong> (-)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>mult</strong> (*)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>div</strong> (/)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿número?</strong> (number?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿número-entero?</strong> (integer?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿cero?</strong> (zero?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿positivo?</strong> (positive?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿negativo?</strong> (negative?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿número-par?</strong> (even?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿número-impar?</strong> (odd?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>menos-de</strong> (<)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>más-de</strong> (>)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>raíz-cuadrada</strong> (sqrt)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>expo</strong> (expt)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>máx</strong> (max)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>mín</strong> (min)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>val-abso</strong> (abs)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>cociente</strong> (quptient)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>residuo</strong> (remainder)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>cociente/residuo</strong> (quotient/remainder)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>módulo</strong> (modulo)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>redondear</strong> (round)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>truncar</strong> (truncate)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>signo</strong> (sgn)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>más</strong> (+)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>menos</strong> (-)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>mult</strong> (*)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>div</strong> (/)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿número?</strong> (number?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿número-entero?</strong> (integer?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿cero?</strong> (zero?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿positivo?</strong> (positive?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿negativo?</strong> (negative?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿número-par?</strong> (even?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿número-impar?</strong> (odd?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>menos-de</strong> (<)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>más-de</strong> (>)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>raíz-cuadrada</strong> (sqrt)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>expo</strong> (expt)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>máx</strong> (max)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>mín</strong> (min)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>val-abso</strong> (abs)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>cociente</strong> (quptient)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>residuo</strong> (remainder)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>cociente/residuo</strong> (quotient/remainder)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>módulo</strong> (modulo)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>redondear</strong> (round)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>truncar</strong> (truncate)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>signo</strong> (sgn)</a></li>
           </ul>
         </li>
 
@@ -155,10 +163,10 @@
              <a class="sdbar nav-link" runat="server" href="~/Definiciones">strings</a>
             </div>
           <ul class="nav flex-column ms-3 collapse" id="stringsSubmenu">
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿cadena?</strong> (string?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>longitud-de-cadena</strong> (string-length)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>subcadena</strong> (substring)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>concatenar-cadena</strong> (string-append)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿cadena?</strong> (string?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>longitud-de-cadena</strong> (string-length)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>subcadena</strong> (substring)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>concatenar-cadena</strong> (string-append)</a></li>
           </ul>
         </li>
 
@@ -169,11 +177,11 @@
              <a class="sdbar nav-link" runat="server" href="~/Definiciones">types</a>
             </div>
           <ul class="nav flex-column ms-3 collapse" id="typesSubmenu">
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿átomo?</strong> (atom?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿símbolo?</strong> (symbol?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿carácter?</strong> (char?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿booleano?</strong> (boolean?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿inmutable?</strong> (immutable?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿átomo?</strong> (atom?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿símbolo?</strong> (symbol?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿carácter?</strong> (char?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿booleano?</strong> (boolean?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿inmutable?</strong> (immutable?)</a></li>
           </ul>
         </li>
 
@@ -184,37 +192,105 @@
              <a class="sdbar nav-link" runat="server" href="~/Definiciones">lists</a>
             </div>
           <ul class="nav flex-column ms-3 collapse" id="listsSubmenu">
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>combinar</strong> (cons)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>lista</strong> (list)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿lista?</strong> (list?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>¿par?</strong> (pair?)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>longitud</strong> (length)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>concatenar</strong> (append)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>pri</strong> (car)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>prri</strong> (caar)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>prrri</strong> (caaar)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>prrrri</strong> (caaaar)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>res</strong> (cdr)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>ress</strong> (cddr)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>resss</strong> (cdddr)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>ressss</strong> (cddddr)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>pres</strong> (cadr)</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" href="#"><strong>resp</strong> (cdar)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>combinar</strong> (cons)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>lista</strong> (list)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿lista?</strong> (list?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>¿par?</strong> (pair?)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>longitud</strong> (length)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>concatenar</strong> (append)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>pri</strong> (car)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>prri</strong> (caar)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>prrri</strong> (caaar)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>prrrri</strong> (caaaar)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>res</strong> (cdr)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>ress</strong> (cddr)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>resss</strong> (cdddr)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>ressss</strong> (cddddr)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>pres</strong> (cadr)</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="#"><strong>resp</strong> (cdar)</a></li>
           </ul>
         </li>
 
       </ul>
     </div>
-      
+      -->
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p> <%: DateTime.Now.Year %> - eschemántico!</p>
+                <p> <%: DateTime.Now.Year %> - esquemático!</p>
             </footer>
         </div>
 
     </form>
+
+    <!--Javascript to remember the state of the sidebar when switching pages-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            if (localStorage.getItem('sidebar-initialized')) { //Sidebar has been initialized- not first visit to page
+                const sidebarMenus = document.querySelectorAll('.collapse'); // Select all collapsible menus
+
+                // Load the saved state of each menu from localStorage
+                sidebarMenus.forEach(menu => {
+                    const menuId = menu.id;
+                    const savedState = localStorage.getItem(`sidebar-${menuId}`);
+
+                    if (savedState === 'true') {
+                        menu.classList.add('show'); // Expand the menu if saved state is true
+                        menu.previousElementSibling.setAttribute('aria-expanded', 'true');
+                    } else if (savedState === 'false') {
+                        menu.classList.remove('show'); // Collapse the menu if saved state is false
+                        menu.previousElementSibling.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
+            // Save the state of each menu when it is toggled
+            sidebarMenus.forEach(menu => {
+                menu.addEventListener('shown.bs.collapse', function () {
+                    localStorage.setItem(`sidebar-${menu.id}`, 'true'); // Save the state as expanded
+                });
+
+                menu.addEventListener('hidden.bs.collapse', function () {
+                    localStorage.setItem(`sidebar-${menu.id}`, 'false'); // Save the state as collapsed
+                });
+            });
+        });
+    </script>
+
+    <!--Javascript to customize syntax highlighting to highlight elements unrecognized by prism.js-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const codeElements = document.querySelectorAll('pre code');
+
+            codeElements.forEach(codeElement => {
+                const html = codeElement.innerHTML;
+
+                let updatedhtml = html.replace(/¿.*\?/g, '<span class="identifier">$&</span>'); //Anything that starts with ¿ and ends with ? is an identifier
+                updatedhtml = updatedhtml.replace(/<span class="token function">definir<\/span>/g, '<span class="keyw">definir</span>');
+                updatedhtml = updatedhtml.replace(/'/g, '<span class="symb">\'</span>');
+                updatedhtml = updatedhtml.replace(/cierto/g, '<span class="bool">cierto</span>');
+                updatedhtml = updatedhtml.replace(/falso/g, '<span class="bool">falso</span>');
+                updatedhtml = updatedhtml.replace(/lista/g, '<span class="identifier">lista</span>');
+                updatedhtml = updatedhtml.replace(/aaquí/g, '<span class="identifier">aquí</span>');
+                updatedhtml = updatedhtml.replace(/g-t/g, '<span class="g-t">></span>');
+                updatedhtml = updatedhtml.replace(/xx/g, '<span class="identifier">x</span>');
+                updatedhtml = updatedhtml.replace(/yy/g, '<span class="identifier">y</span>');
+                updatedhtml = updatedhtml.replace(/zz/g, '<span class="identifier">z</span>');
+                updatedhtml = updatedhtml.replace(/l-t/g, '<span class="l-t"><</span>');
+                updatedhtml = updatedhtml.replace(/#lang scheme/g, '<span class="black">#lang scheme</span>');
+                updatedhtml = updatedhtml.replace(/scheme-traductor\/scheme-traductor/g, '<span class="black">scheme-traductor/scheme-traductor</span>');
+                updatedhtml = updatedhtml.replace(/liss/g, '<span class="identifier">lis</span>');
+                updatedhtml = updatedhtml.replace(/replacee/g, '<span class="identifier">replace*</span>');
+
+                codeElement.innerHTML = updatedhtml;
+            });
+        });
+
+    </script>
+
 </body>
 </html>

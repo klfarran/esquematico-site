@@ -5,8 +5,8 @@
 
 <div class="main-content">
     <div class="jumbotron">
-        <h1>eschemántico!</h1>
-        <p class="lead">eschemántico! es... </p>
+        <h1>eschemático!</h1>
+        <p class="lead">eschemático! es... </p>
     </div>
 </div>
     
