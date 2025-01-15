@@ -281,6 +281,7 @@
                 updatedhtml = updatedhtml.replace(/g-t/g, '<span class="g-t">></span>');
                 updatedhtml = updatedhtml.replace(/xx/g, '<span class="identifier">x</span>');
                 updatedhtml = updatedhtml.replace(/yy/g, '<span class="identifier">y</span>');
+                updatedhtml = updatedhtml.replace(/zz/g, '<span class="identifier">z</span>');
                 updatedhtml = updatedhtml.replace(/l-t/g, '<span class="l-t"><</span>');
                 updatedhtml = updatedhtml.replace(/#lang scheme/g, '<span class="black">#lang scheme</span>');
                 updatedhtml = updatedhtml.replace(/scheme-traductor\/scheme-traductor/g, '<span class="black">scheme-traductor/scheme-traductor</span>');

@@ -5,7 +5,7 @@
 
 <div class="main-content">
     <div class="jumbotron">
-       <h3>Download scheme translator</h3>
+       <h3>Download esquemático</h3>
     </div>
 </div>
 

@@ -265,13 +265,20 @@
             Ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
- g-t (definir xx 12)
- g-t (¡establezca! xx (más 1 xx))
- g-t xx
+g-t (definir xx 3)
+g-t xx 
+ 3 
+g-t (¡establezca! xx 4)
+g-t xx
+ 4
+
+ g-t (definir yy 12)
+ g-t (¡establezca! yy (más 1 yy))
+ g-t yy
  13
 
- g-t (sea ([xx 5])
-     (¡establezca! xx (más 1 xx)) xx)
+ g-t (sea ([zz 5])
+     (¡establezca! zz (más 1 zz)) zz)
  6
 
  </code></pre>

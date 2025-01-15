@@ -359,7 +359,7 @@ g-t (¿falso? (o cierto falso))
             
            <div class="proctitle-div">
             <h3 class ="procname">¿cierto?</h3>
-            <p style="text-indent:575px;"><i>este procedimiento no existe en la versión original de Racket</p>
+            <p style="text-indent:575px;">este procedimiento no existe en la versión original de Racket</p>
         </div>
 
         <div>
@@ -368,14 +368,26 @@ g-t (¿falso? (o cierto falso))
 
         <pre>
              <span class="large">     
-                        devuelve <i>cierto</i> si v se evalúa como cierto, falso en caso contrario
+                        devuelve <i>cierto</i> si v no se evalúa como falso, falso en caso contrario. solo devuelve falso si v se evalúa como falso, sin importar la entrada. 
              </span>
 <span class="bold">
             Ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+g-t (¿cierto? 5)
+ cierto
+     
+g-t (¿cierto? cierto)
+ cierto
 
+g-t (¿cierto? falso)
+ falso
 
+g-t (¿cierto? (o cierto falso))
+cierto
+
+g-t (¿cierto? (menos 3 1))
+cierto
          </code></pre>
 
     </div>
