@@ -21,7 +21,7 @@ relevante en español
 
 esta colección no ofrece soporte para todos los procedimientos del lenguaje Scheme/Racket. por favor, consulte la página de 
 <a style="text-decoration:none" runat="server" href="~/Documentación">documentación</a> para ver todos los procedimientos disponibles para usar en español
-                    
+<!--haga clic aquí para aprender cómo <a style="text-decoration:none" runat="server" href="~/EmpezarAquí">crear su primer programa</a> -->                   
     tenga en cuenta que para poder utilizar las definiciones proporcionadas en esquemático!, es obligatorio que tenga estas
     dos líneas en la parte superior de cada programa: </pre>
      <pre><code class="language-scheme">
@@ -29,7 +29,7 @@ esta colección no ofrece soporte para todos los procedimientos del lenguaje Sch
     (require scheme-traductor/scheme-traductor)
       </code></pre>
 
-         <pre style="font-size: 22px;">
+         <pre style="font-size: 20px;">
          
 ¡Feliz programación!</pre>
 

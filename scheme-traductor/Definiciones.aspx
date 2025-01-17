@@ -182,7 +182,7 @@
         <div>
            <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(sea ([id val] ...) cuerpo ...+)</strong></p>
              <p style="text-indent:75px; font-style:italic;">crea un enlace local del valor 'val' al identificador 'id' que está limitado al alcance del procedimiento actual, como se describe en 'cuerpo'</p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(sea proc-id ([id val] ...) cuerpo ...+)</strong></p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(sea id-de-proc ([id val] ...) cuerpo ...+)</strong></p>
              <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
        </div>
 

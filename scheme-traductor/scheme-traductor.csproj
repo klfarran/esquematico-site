@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>scheme_traductor</RootNamespace>
     <AssemblyName>scheme-traductor</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44356</IISExpressSSLPort>
@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,10 +52,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -83,6 +82,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -131,7 +131,9 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Documentation.aspx" />
+    <Content Include="EmpezarAquí.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="images\lambdawhite.png" />
     <Content Include="Inicio.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -167,6 +169,7 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="English.Master" />
     <Content Include="Español.Master" />
+    <None Include="Properties\PublishProfiles\esquematico - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -266,6 +269,13 @@
     </Compile>
     <Compile Include="Documentation.aspx.designer.cs">
       <DependentUpon>Documentation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpezarAquí.aspx.cs">
+      <DependentUpon>EmpezarAquí.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpezarAquí.aspx.designer.cs">
+      <DependentUpon>EmpezarAquí.aspx</DependentUpon>
     </Compile>
     <Compile Include="English.Master.cs">
       <DependentUpon>English.Master</DependentUpon>
