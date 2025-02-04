@@ -5,8 +5,9 @@
 
 <div class="main-content">
     <div class="jumbotron">
-        <h1>"¡empezar su primer programa aquí!</h1>
+        <h1><i>comenzar aquí</i></h1>
      </div>
+
 
 
     </div>

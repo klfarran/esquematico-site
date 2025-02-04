@@ -157,16 +157,17 @@ pre[class="language-scheme"] .token.keyword, .token.punctuation {
     font-weight:bold;
 }
 
-pre[class="language-scheme"] .token.function, .token.operator, .token.symbol, .token.lambda-parameter {
+pre[class="language-scheme"] .token.function, .token.operator, .token.symbol, .token.lambda-parameter, .token.builtin {
     color: #4c6ab0; /* Navy Blue */
 }
 
 pre[class="language-scheme"] .token.number, .token.string {
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-    color: #228B22 /*Forest Green*/
+    color: #45A045 /*Forest Green*/
 }
 
 pre[class="language-scheme"] .token.comment {
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
     color: firebrick;
 }
 
@@ -192,12 +193,12 @@ pre[class="language-scheme"] .token {
 
 .symb {
     text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-    color: #228B22 /*Forest Green*/
+    color: #45A045; /*Forest Green*/
 }
 
 .bool {
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.1); 
-    color: firebrick;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    color: #4c6ab0; /* Navy Blue */
 }
 
 .proctitle-div {
@@ -212,4 +213,13 @@ pre[class="language-scheme"] .token {
     margin-bottom: 20px;
     text-indent: 25px;
     */font-family: "Courier New", Courier, monospace;*/
+}
+
+.link {
+    text-decoration:none;
+    color:#5469C5;
+}
+
+.link:hover {
+    text-decoration:underline;
 }

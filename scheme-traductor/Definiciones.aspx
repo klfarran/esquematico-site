@@ -16,7 +16,7 @@
 
     <div class="proctitle-div">
       <h3 class="procname">definir</h3>
-        <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/define.html">'define'</a></i></p>
+        <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/define.html">'define'</a></i></p>
     </div>
 <div>
    <p style="text-indent: 55px; margin-top:10px; margin-bottom:-2px;"><strong>(definir id expr) </strong></p>
@@ -35,8 +35,8 @@
                         en un contexto que permite la expansión liberal de definir, id está enlazado como sintaxis si expr es una forma lambda inmediata con 
                         argumentos de la palabra clave 'argumentos' o 'args' </span>    
 
-    <span class="bold">
-             Ejemplos: </span>
+    <span class="bold" style="font-size:18px">
+       ejemplos: </span>
 </pre>
    <pre><code class="language-scheme">
            
@@ -71,7 +71,7 @@
    
     <div class="proctitle-div">
        <h3 class ="procname">rastrear</h3>
-        <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/debugging.html">'trace'</a></i></p>
+        <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/debugging.html">'trace'</a></i></p>
     </div>
 
     <div>
@@ -92,8 +92,8 @@
 
                         el resultado de una expresión de rastrear es #&lt;void&gt; </span>
 
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
   g-t (definir ¿contiene-5?
@@ -127,7 +127,7 @@
 
         <div class="proctitle-div">
             <h3 class ="procname">rastrear-definir</h3>
-            <p style="text-indent:450px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/debugging.html#%28form._%28%28lib._racket%2Ftrace..rkt%29._trace-define%29%29">'trace-define'</a></i></p>
+            <p style="text-indent:450px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/debugging.html#%28form._%28%28lib._racket%2Ftrace..rkt%29._trace-define%29%29">'trace-define'</a></i></p>
         </div>
 
         <div>
@@ -143,9 +143,8 @@
                         el rastrear-definir es una abreviatura para definir primero un procedimiento y luego rastrearlo. cada vez que se invoca el procedimiento, se
                         muestra el seguimiento. esta forma es compatible con todas las formas de definir  </span>
 
-<span class="bold">
-            Ejemplos:  </span>
-        </pre>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>  </pre>
    <pre><code class="language-scheme">
    g-t (rastrear-definir ¿contiene-5?
         (lambda (lista)
@@ -176,7 +175,7 @@
             
            <div class="proctitle-div">
             <h3 class ="procname">sea</h3>
-            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/let.html">'let'</a></i></p>
+            <p style="text-indent:650px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/let.html">'let'</a></i></p>
         </div>
 
         <div>
@@ -191,8 +190,8 @@
                         la primera forma evalúa los val de izquierda a derecha, crea una nueva ubicación para cada id, y coloca los valores en las ubicaciones
                         a continuación, evalúa los cuerpos, en los que los id están vinculados. los id tienen que ser distintos 
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+       ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
  g-t (sea ([xx 5]) xx)
@@ -213,7 +212,7 @@
 
         <div class="proctitle-div">
             <h3 class ="procname">sea*</h3>
-            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/let.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._let%2A%29%29">'let*'</a></i></p>
+            <p style="text-indent:650px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/let.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._let%2A%29%29">'let*'</a></i></p>
         </div>
 
         <div>
@@ -223,13 +222,13 @@
 
         <pre>
              <span class="large">     
-                        similar a <a style="text-decoration:none" href="#sea">sea</a>, pero evalúa los val-expr uno por uno, creando una ubicación para cada id tan pronto como el valor esté disponible
+                        similar a <a class="link" href="#sea">sea</a>, pero evalúa los val-expr uno por uno, creando una ubicación para cada id tan pronto como el valor esté disponible
 
                         los id están enlazados en los valexpr restantes, así como en los cuerpos, y los id no necesitan ser distintos; los enlaces posteriores 
                         sombrean los enlaces anteriores
              </span>
-<span class="bold">
-            Ejemplo:  </span>
+<span class="bold" style="font-size:18px">
+       ejemplo:  </span>
 </pre>
    <pre><code class="language-scheme">
  g-t (sea* ([xx 1]
@@ -247,7 +246,7 @@
 
         <div class="proctitle-div">
             <h3 class ="procname">¡establezca!</h3>
-            <p style="text-indent:550px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/set_.html">'set!'</a></i></p>
+            <p style="text-indent:550px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/set_.html">'set!'</a></i></p>
         </div>
 
         <div>
@@ -261,8 +260,8 @@
                         nivel superior. si id se refiere a un enlace importado, se informa de un error de sintaxis. Si id se refiere a una variable de nivel superior
                         que no se ha definido, se genera una excepción 
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+       ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
 g-t (definir xx 3)

@@ -16,7 +16,7 @@
 
         <div class="proctitle-div">
             <h3 class ="procname">¿igual?</h3>
-            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/Equality.html">equal?</a></i></p>
+            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/Equality.html">equal?</a></i></p>
         </div>
 
         <div>
@@ -26,8 +26,8 @@
 
         <pre>
 
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+       ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
  g-t (¿igual? 'si 'si)
@@ -57,7 +57,7 @@ cierto
 
         <div class="proctitle-div">
             <h3 class ="procname">¿igv?</h3>
-            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/Equality.html#%28def._%28%28quote._~23~25kernel%29._eqv~3f%29%29">eqv?</a></i></p>
+            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/Equality.html#%28def._%28%28quote._~23~25kernel%29._eqv~3f%29%29">eqv?</a></i></p>
         </div>
 
         <div>
@@ -76,8 +76,8 @@ cierto
                         (como listas) y no puede ser personalizado por tipos de datos definidos por el usuario. El uso de ¿igv? se desaconseja ligeramente en favor 
                         de ¿igual?
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+       ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
  g-t (¿igv? 'si 'si)
@@ -107,7 +107,7 @@ cierto
 
         <div class="proctitle-div">
             <h3 class ="procname">¿ig?</h3>
-            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/Equality.html#%28def._%28%28quote._~23~25kernel%29._eq~3f%29%29">eq?</a></i></p>
+            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/Equality.html#%28def._%28%28quote._~23~25kernel%29._eq~3f%29%29">eq?</a></i></p>
         </div>
 
         <div>
@@ -117,8 +117,8 @@ cierto
 
         <pre>
             
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+       ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
   g-t (¿ig? 'si 'si)

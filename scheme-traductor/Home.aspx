@@ -9,16 +9,16 @@
     </div>
 
            <pre style="font-size: 20px;"> 
-     <i>esquemático</i> is an extension of the functional programming language <a style="text-decoration:none" href="https://www.scheme.org/">Scheme </a>which allows users to interact with built-in
+     <i>esquemático</i> is an extension of the functional programming language <a class="link" href="https://www.scheme.org/">Scheme</a> which allows users to interact with built-in
      Scheme procedures in Spanish. users can call built-in procedures using Spanish keywords in place of the traditional English 
-     keywords as well as recieve appropriate error messages in Spanish if there is an error in syntax or logic.        
+     keywords as well as receive appropriate error messages in Spanish if there is an error in syntax or logic.        
            
-     <i>esquemático</i> is a Racket collection intended for use with Dr. Racket IDE  which is you can download <a style="text-decoration:none" href="https://download.racket-lang.org/">here</a>. it is comprised of 
-     a series of Racket <a style="text-decoration:none" href="https://docs.racket-lang.org/guide/macros.html">macros</a> that act as a hidden layer in the Dr. Racket IDE, interpreting Spanish user input and appropraitely
+     <i>esquemático</i> is a Racket collection intended for use with Dr. Racket IDE, which you can download <a class="link" href="https://download.racket-lang.org/">here</a>. it is comprised of 
+     a series of Racket <a class="link" href="https://docs.racket-lang.org/guide/macros.html">macros</a> that act as a hidden layer in the Dr. Racket IDE, interpreting Spanish user input and appropraitely
      calling the corresponding English built-in procedure or throwing a relevant error message in Spanish. 
 
      this collection does not provide support for every procedure belonging to the Scheme/ Racket language. please see the 
-     <a style="text-decoration:none" runat="server" href="~/Documentation">documentation</a> to view the procedures available for use in Spanish. this collection is intended for use by Spanish speakers,
+     <a class="link" runat="server" href="~/Documentation">documentation</a> to view the procedures available for use in Spanish. this collection is intended for use by Spanish speakers,
      and documentation in English is limited. 
 
     in order to use the procedures available with <i>esquemático</i>, these two lines must appear at the top of every .rkt file: </pre>  

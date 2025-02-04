@@ -16,15 +16,14 @@
             
            <div class="proctitle-div">
             <h3 class ="procname">cierto</h3>
-            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/guide/booleans.html">'#t'</a></i></p>
+            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/guide/booleans.html">'#t'</a></i></p>
         </div>
 
-        <pre>
-             <span class="large">     
-                cierto es el valor booleano de verdad devuelto si un procedimiento o valor se evalúa como cierto  
+        <pre>          
+<span class="large">         cierto es el valor booleano de verdad devuelto si un procedimiento o valor se evalúa como cierto  
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
  g-t (¿ig? 2 (más 1 1))
@@ -57,14 +56,14 @@ falso
             
            <div class="proctitle-div">
             <h3 class ="procname">falso</h3>
-            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/guide/booleans.html">'#f'</a></i></p>
+            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/guide/booleans.html">'#f'</a></i></p>
         </div>
 
         <pre>                 
-<span class="large">          falso es el valor booleano de verdad devuelto si un procedimiento o valor se evalúa como falso
+<span class="large">            falso es el valor booleano de verdad devuelto si un procedimiento o valor se evalúa como falso
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
  g-t (¿ig? 2 (más 1 1))
@@ -97,7 +96,7 @@ falso
             
            <div class="proctitle-div">
             <h3 class ="procname">si</h3>
-            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/if.html">'if'</a></i></p>
+            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/if.html">'if'</a></i></p>
         </div>
 
         <div>
@@ -112,8 +111,8 @@ falso
                         están en posición de cola con respecto a la condición 'si'
 
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
  g-t (si (¿positivo? -5) 1 2)
@@ -134,7 +133,7 @@ falso
             
            <div class="proctitle-div">
             <h3 class ="procname">condición</h3>
-            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/if.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._cond%29%29">'cond'</a></i></p>
+            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/if.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._cond%29%29">'cond'</a></i></p>
         </div>
 
         <div>
@@ -156,8 +155,8 @@ falso
                             <i>cuerpo-de-entonces-expr</i>, que está en posición de cola con respecto a la forma condición, son los resultados de toda 
                             la forma condición
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
  g-t (condición)
@@ -203,7 +202,7 @@ nno hay un número máximo
             
            <div class="proctitle-div">
             <h3 class ="procname">sino</h3>
-            <p style="text-indent:700px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/if.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._else%29%29">'else'</a></i></p>
+            <p style="text-indent:700px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/if.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._else%29%29">'else'</a></i></p>
         </div>
 
         <div>
@@ -216,8 +215,8 @@ nno hay un número máximo
              <span class="large">     
                      reconocido solo dentro de la forma <i>condición</i>. sino como una expresión fuera de una forma de <i>condición</i> no existe
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
 g-t (definir número-máximo
@@ -239,7 +238,7 @@ g-t (número-máximo 1 2)
             
            <div class="proctitle-div">
             <h3 class ="procname">y</h3>
-            <p style="text-indent:750px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/if.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._and%29%29">'and'</a></i></p>
+            <p style="text-indent:750px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/if.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._and%29%29">'and'</a></i></p>
         </div>
 
         <div>
@@ -253,8 +252,8 @@ g-t (número-máximo 1 2)
                         de lo contrario, se evalúa la primera <i>expr</i>. si produce <i>falso</i>, el resultado de la expresión <i>y</i> es <i>falso</i>. si no, el resultado es el mismo 
                         que una expresión <i>y</i> con las expr restantes en posición de cola con respecto al original expresión <i>y</i>
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
 g-t (y 1)
@@ -278,7 +277,7 @@ falso
             
            <div class="proctitle-div">
             <h3 class ="procname">o</h3>
-            <p style="text-indent:750px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/if.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._or%29%29">'or'</a></i></p>
+            <p style="text-indent:750px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/if.html#%28form._%28%28lib._racket%2Fprivate%2Fletstx-scheme..rkt%29._or%29%29">'or'</a></i></p>
         </div>
 
         <div>
@@ -292,8 +291,8 @@ falso
                         de lo contrario, se evalúa la primera <i>expr</i>. si produce un valor distinto de <i>falso</i>, el resultado es el resultado de la expresión <i>or</i>. si no, 
                         el resultado es el mismo que una expresión <i>or</i> con las expr restantes en posición de cola con respecto al original expresión <i>o</i>
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
 g-t (o 1)
@@ -320,7 +319,7 @@ g-t (o falso 5)
             
            <div class="proctitle-div">
             <h3 class ="procname">¿falso?</h3>
-            <p style="text-indent:650px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/booleans.html#%28def._%28%28lib._racket%2Fbool..rkt%29._false~3f%29%29">'false?'</a></i></p>
+            <p style="text-indent:650px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/booleans.html#%28def._%28%28lib._racket%2Fbool..rkt%29._false~3f%29%29">'false?'</a></i></p>
         </div>
 
         <div>
@@ -331,8 +330,8 @@ g-t (o falso 5)
              <span class="large">     
                         devuelve lo opuesto a v (valor booleano) 
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
 g-t (¿falso? 5)
@@ -370,8 +369,8 @@ g-t (¿falso? (o cierto falso))
              <span class="large">     
                         devuelve <i>cierto</i> si v no se evalúa como falso, falso en caso contrario. solo devuelve falso si v se evalúa como falso, sin importar la entrada. 
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
 g-t (¿cierto? 5)

@@ -129,20 +129,6 @@
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#menos">menos</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#mult">mult</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#div">div</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número%3F">¿número?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número-entero%3F">¿número-entero?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿cero%3F">¿cero?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿positivo%3F">¿positivo?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿negativo%3F">¿negativo?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número-par%3F">¿número-par?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número-impar%3F">¿número-impar?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#menos-de">menos-de</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#más-de">más-de</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#raíz-cuadrada">raíz-cuadrada</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#expo">expo</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#máx">máx</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#mín">mín</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#val-abso">val-abso</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#cociente">cociente</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#residuo">residuo</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#cociente/residuo">cociente/residuo</a></li>
@@ -150,6 +136,20 @@
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#redondear">redondear</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#truncar">truncar</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#signo">signo</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#menos-de">menos-de</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#más-de">más-de</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#raíz-cuadrada">raíz-cuadrada</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#expo">expo</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#máx">máx</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#mín">mín</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#val-abso">val-abso</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número%3F">¿número?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número-entero%3F">¿número-entero?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿cero%3F">¿cero?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿positivo%3F">¿positivo?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿negativo%3F">¿negativo?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número-par%3F">¿número-par?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número-impar%3F">¿número-impar?</a></li>
           </ul>
         </li>
 
@@ -181,6 +181,8 @@
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿booleano%3F">¿booleano?</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿cadena%3F">¿cadena?</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿inmutable%3F">¿inmutable?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿lista%3F">¿lista?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿par%3F">¿par?</a></li>
           </ul>
         </li>
 
@@ -192,17 +194,17 @@
             </div>
           <ul class="nav flex-column ms-3 collapse" id="listasSubmenu">
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#combinar">combinar</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#pri">pri</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#res">res</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#longitud">longitud</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#concatenar">concatenar</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#lista">lista</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#¿lista%3F">¿lista?</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#¿par%3F">¿par?</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#¿nulo%3F">¿nulo?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#longitud">longitud</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#concatenar">concatenar</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#pri">pri</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#prri">prri</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#prrri">prrri</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#prrrri">prrrri</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#res">res</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#ress">ress</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#resss">resss</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#ressss">ressss</a></li>

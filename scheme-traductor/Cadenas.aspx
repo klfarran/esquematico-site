@@ -16,7 +16,7 @@
             
            <div class="proctitle-div">
             <h3 class ="procname">¿cadena?</h3>
-            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="">'string?'</a></i></p>
+            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/strings.html#%28def._%28%28quote._~23~25kernel%29._string~3f%29%29">'string?'</a></i></p>
         </div>
 
         <div>
@@ -30,8 +30,8 @@
              <span class="large">     
                 desc 
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
 
@@ -46,7 +46,7 @@
             
            <div class="proctitle-div">
             <h3 class ="procname">¿inmutable?</h3>
-            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="https://docs.racket-lang.org/reference/booleans.html#%28def._%28%28quote._~23~25kernel%29._immutable~3f%29%29">'immutable?'</a></i></p>
+            <p style="text-indent:550px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/booleans.html#%28def._%28%28quote._~23~25kernel%29._immutable~3f%29%29">'immutable?'</a></i></p>
         </div>
 
         <div>
@@ -60,8 +60,8 @@
              <span class="large">     
                 desc 
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
 
@@ -76,7 +76,7 @@
             
            <div class="proctitle-div">
             <h3 class ="procname">longitud-de-cadena</h3>
-            <p style="text-indent:400px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="">'string-length'</a></i></p>
+            <p style="text-indent:450px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/strings.html#%28def._%28%28quote._~23~25kernel%29._string-length%29%29">'string-length'</a></i></p>
         </div>
 
         <div>
@@ -90,8 +90,8 @@
              <span class="large">     
                 desc 
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
 
@@ -106,7 +106,7 @@
             
            <div class="proctitle-div">
             <h3 class ="procname">subcadena</h3>
-            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="">'substring'</a></i></p>
+            <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/strings.html#%28def._%28%28quote._~23~25kernel%29._substring%29%29">'substring'</a></i></p>
         </div>
 
         <div>
@@ -120,8 +120,8 @@
              <span class="large">     
                 desc 
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
 
@@ -136,7 +136,7 @@
             
            <div class="proctitle-div">
             <h3 class ="procname">concatenar-cadena</h3>
-            <p style="text-indent:400px;"><i>consulte la documentación original de Racket para <a style="text-decoration:none" href="">'append'</a></i></p>
+            <p style="text-indent:500px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/strings.html#%28def._%28%28quote._~23~25kernel%29._string-append%29%29">'string-append'</a></i></p>
         </div>
 
         <div>
@@ -150,8 +150,8 @@
              <span class="large">     
                 desc 
              </span>
-<span class="bold">
-            Ejemplos:  </span>
+<span class="bold" style="font-size:18px">
+      ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
 
