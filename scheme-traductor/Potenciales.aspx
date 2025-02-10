@@ -45,7 +45,7 @@ cierto
 falso
 
  g-t (si "no" 1 0)
-0
+ 0
          </code></pre>
 
     </div>

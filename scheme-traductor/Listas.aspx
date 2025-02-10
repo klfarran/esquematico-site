@@ -20,22 +20,37 @@
         </div>
 
         <div>
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic;"></p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(combinar a b) → lista</strong></p>
+           <p style=" text-indent: 70px; margin-bottom:2px;">a: cualquier tipo</p>
+           <p style=" text-indent: 70px; margin-bottom:2px;">b: lista</p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(combinar a b) → par</strong></p>
+           <p style=" text-indent: 70px; margin-bottom:2px;">a: cualquier tipo</p>
+           <p style=" text-indent: 70px; margin-bottom:2px;">b: cualquier tipo</p>
        </div>
 
         <pre>
              <span class="large">     
-                desc 
+                
+                devuelve un par recién asignado cuyo primer elemento es <i>a</i> y el segundo elemento es <i>b</i>. cuando <i>b</i> es una lista, el par 
+                asignado también es una lista
+
+                combinar es realmente la única forma de añadir elementos a las listas en Scheme
              </span>
 <span class="bold" style="font-size:18px">
       ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+    g-t (combinar 1 2)
+    g-t (1 . 2)
 
+    g-t (combinar 1 '(2))
+    g-t (1 2)
 
+    g-t (combinar '(1 2) '(3 4))
+    g-t ((1 2) 3 4)
+
+    g-t (combinar 1 '())
+    g-t (1)
          </code></pre>
 
     </div>
@@ -50,22 +65,31 @@
         </div>
 
         <div>
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic;"></p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(pri v) → cualquier tipo</strong></p>
+           <p style=" text-indent: 70px; margin-bottom:2px;">v: par</p>
        </div>
 
         <pre>
              <span class="large">     
-                desc 
+                devuelve el primer elemento del par <i>v</i> 
+
+                es obligatorio que <i>v</i> sea un par/ una lista 
              </span>
 <span class="bold" style="font-size:18px">
       ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+    g-t (pri '(1 2))
+    g-t 1
 
+    g-t (pri '(1 . 2))
+    g-t 1
 
+    g-t (pri '((2) 2))
+    g-t (2)
+
+    g-t (pri '(2 (2)))
+    g-t 2
          </code></pre>
 
     </div>
@@ -80,22 +104,29 @@
         </div>
 
         <div>
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic;"></p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(res v) → cualquier tipo</strong></p>
+           <p style=" text-indent: 70px; margin-bottom:2px;">v: par</p>
        </div>
 
         <pre>
              <span class="large">     
-                desc 
+                devuelve el segundo elemento del par <i>v</i> 
              </span>
 <span class="bold" style="font-size:18px">
       ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+    g-t (res '(1 2))
+    g-t (2)
 
+    g-t (res '(1 (2)))
+    g-t ((2))
 
+    g-t (res '(1))
+    g-t ()
+
+    g-t (res '())
+    resVDCError
          </code></pre>
 
     </div>
@@ -110,52 +141,79 @@
         </div>
 
         <div>
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic;"></p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
+          <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(longitud v) → número entero no negativo</strong></p>
+          <p style=" text-indent: 70px; margin-bottom:2px;">v: lista</p>
        </div>
 
         <pre>
              <span class="large">     
-                desc 
+                devuelve el número de elementos en v. esta función toma un tiempo proporcional a esa longitud
              </span>
 <span class="bold" style="font-size:18px">
       ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+    g-t (longitud '())
+    g-t 0
 
+    g-t (longitud '(1 2 3 4 5))
+    g-t 5
 
+    g-t (longitud (lista 1 2 3))
+    g-t 3
          </code></pre>
 
     </div>
 
      <hr>
 
-    <div id="concatenar" class="scrl">
+    <div id="juntar" class="scrl">
             
            <div class="proctitle-div">
-            <h3 class ="procname">concatenar</h3>
+            <h3 class ="procname">juntar</h3>
             <p style="text-indent:600px;"><i>consulte la documentación original de Racket para <a class="link" href="https://docs.racket-lang.org/reference/pairs.html#%28def._%28%28quote._~23~25kernel%29._append%29%29">'append'</a></i></p>
         </div>
 
         <div>
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic;"></p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(juntar v ...) → lista</strong></p>
+           <p style=" text-indent: 70px; margin-bottom:2px;">v: lista</p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(juntar v ... w) → lista</strong></p>
+           <p style=" text-indent: 70px; margin-bottom:2px;">v: lista</p>
+           <p style=" text-indent: 70px; margin-bottom:2px;">w: cualquier tipo</p>
        </div>
 
         <pre>
              <span class="large">     
-                desc 
+                cuando se proporcionan solo listas como argumentos, el resultado es una lista que contiene todos los elementos de las listas dadas en orden
+
+                el último argumento no necesita ser una lista. en este caso, el resultado es una "lista impropia"
+
+                esta función toma un tiempo proporcional a la suma de las longitudes de todos los arguementos, excepto el último
              </span>
 <span class="bold" style="font-size:18px">
       ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+    g-t (juntar (lista 1 2) (lista 3 4))
+    g-t (1 2 3 4)
 
+    g-t (juntar (lista 1 2) (lista 3 4) (lista 5 6) (lista 7 8))
+    g-t (1 2 3 4 5 6 7 8)
 
+    g-t (juntar '(1 2) 3)
+    g-t (1 2 . 3)
+
+    g-t (juntar '(2) '(3) '(4) 5)
+    g-t (2 3 4 . 5)
+
+    g-t (juntar '(3))
+    g-t (3)
+
+    g-t (juntar 4)
+    g-t 4
+
+    g-t (juntar)
+    g-t ()
          </code></pre>
 
     </div>
@@ -170,29 +228,33 @@
         </div>
 
         <div>
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic;"></p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(lista v ... ) → list</strong></p>
+           <p style=" text-indent: 70px; margin-bottom:2px;">v: cualquier valor</p>
        </div>
 
         <pre>
              <span class="large">     
-                desc 
+                devuelve una lista recién asignada que contiene los v como sus elementos 
              </span>
 <span class="bold" style="font-size:18px">
       ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+    g-t (lista)
+    g-t ()
 
+    g-t (lista 1 2 3)
+    g-t (1 2 3)
 
+    g-t (lista (lista 1 2) (lista 1 2))
+    g-t ((1 2) (1 2))
          </code></pre>
 
     </div>
 
      <hr>
 
-    <div id="¿lista?" class="scrl">
+       <div id="¿lista?" class="scrl">
             
            <div class="proctitle-div">
             <h3 class ="procname">¿lista?</h3>
@@ -200,22 +262,32 @@
         </div>
 
         <div>
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic;"></p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(¿lista? v ...) → booleano</strong></p>
+           <p style=" text-indent: 70px; margin-bottom:2px;">v: cualquier tipo</p>
        </div>
 
         <pre>
              <span class="large">     
-                desc 
+                devuelve <i>cierto</i> si v es una lista: ya sea la lista vacía, o un par cuyo segundo elemento es una lista
              </span>
 <span class="bold" style="font-size:18px">
       ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+    g-t (¿lista? 1)
+    g-t falso
 
+    g-t (¿lista? '(1 2 3))
+    g-t cierto
 
+    g-t (¿lista? "lista")
+    g-t falso
+
+    g-t (¿lista? '(1 . (2)))
+    g-t cierto
+
+    g-t (¿lista? '())
+    g-t cierto
          </code></pre>
 
     </div>
@@ -230,22 +302,35 @@
         </div>
 
         <div>
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic;"></p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(¿par? v ...) → booleano</strong></p>
+           <p style=" text-indent: 70px; margin-bottom:2px;">v: cualquier tipo</p>
        </div>
 
         <pre>
              <span class="large">     
-                desc 
+                devuelve <i>cierto</i> si v es un par, <i>falso</i> en caso contrario
              </span>
 <span class="bold" style="font-size:18px">
       ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+    g-t (¿par? 1)
+    g-t falso
 
+    g-t (¿par? (combinar 1 2))
+    g-t cierto
 
+    g-t (¿par? (lista 1 2))
+    g-t cierto
+
+    g-t (¿par? '(1 2))
+    g-t cierto
+
+    g-t (¿par? '(1 . 2))
+    g-t cierto
+
+    g-t (¿par? '())
+    g-t falso
          </code></pre>
 
     </div>

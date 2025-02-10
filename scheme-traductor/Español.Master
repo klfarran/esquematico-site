@@ -160,11 +160,11 @@
              <a class="sdbar nav-link" runat="server" href="~/Cadenas">cadenas</a>
             </div>
           <ul class="nav flex-column ms-3 collapse" id="stringsSubmenu">
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#¿cadena%3F">¿cadena?</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#¿inmutable%3F">¿inmutable?</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#longitud-de-cadena">longitud-de-cadena</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#subcadena">subcadena</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#concatenar-cadena">concatenar-cadena</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#¿cadena%3F">¿cadena?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#¿inmutable%3F">¿inmutable?</a></li>
           </ul>
         </li>
 
@@ -197,7 +197,7 @@
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#pri">pri</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#res">res</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#longitud">longitud</a></li>
-            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#concatenar">concatenar</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#juntar">juntar</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#lista">lista</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#¿lista%3F">¿lista?</a></li>
             <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#¿par%3F">¿par?</a></li>
@@ -230,39 +230,50 @@
 
 
     <!--Javascript to remember the state of the sidebar when switching pages-->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            
-            if (localStorage.getItem('sidebar-initialized')) { //Sidebar has been initialized- not first visit to page
-                const sidebarMenus = document.querySelectorAll('.collapse'); // Select all collapsible menus
+   <script>
+       document.addEventListener('DOMContentLoaded', function () {
 
-                // Load the saved state of each menu from localStorage
-                sidebarMenus.forEach(menu => {
-                    const menuId = menu.id;
-                    const savedState = localStorage.getItem(`sidebar-${menuId}`);
+           // Check if the page has been loaded before in this session
+           if (!sessionStorage.getItem('sidebar-initialized')) {
+               // First load of the page in this session, reset sidebar state
+               sessionStorage.setItem('sidebar-initialized', 'true');
 
-                    if (savedState === 'true') {
-                        menu.classList.add('show'); // Expand the menu if saved state is true
-                        menu.previousElementSibling.setAttribute('aria-expanded', 'true');
-                    } else if (savedState === 'false') {
-                        menu.classList.remove('show'); // Collapse the menu if saved state is false
-                        menu.previousElementSibling.setAttribute('aria-expanded', 'false');
-                    }
-                });
-            }
+               const sidebarMenus = document.querySelectorAll('.collapse');
+               sidebarMenus.forEach(menu => {
+                   // Collapse all menus on the first load of the page
+                   menu.classList.remove('show');
+                   menu.previousElementSibling.setAttribute('aria-expanded', 'false');
+               });
+           } else {
+               // Load the saved state of each menu from sessionStorage
+               const sidebarMenus = document.querySelectorAll('.collapse');
+               sidebarMenus.forEach(menu => {
+                   const menuId = menu.id;
+                   const savedState = sessionStorage.getItem(`sidebar-${menuId}`);
+
+                   if (savedState === 'true') {
+                       menu.classList.add('show'); // Expand the menu if saved state is true
+                       menu.previousElementSibling.setAttribute('aria-expanded', 'true');
+                   } else if (savedState === 'false') {
+                       menu.classList.remove('show'); // Collapse the menu if saved state is false
+                       menu.previousElementSibling.setAttribute('aria-expanded', 'false');
+                   }
+               });
+           }
 
             // Save the state of each menu when it is toggled
+            const sidebarMenus = document.querySelectorAll('.collapse');
             sidebarMenus.forEach(menu => {
                 menu.addEventListener('shown.bs.collapse', function () {
-                    localStorage.setItem(`sidebar-${menu.id}`, 'true'); // Save the state as expanded
+                    sessionStorage.setItem(`sidebar-${menu.id}`, 'true'); // Save the state as expanded
                 });
 
                 menu.addEventListener('hidden.bs.collapse', function () {
-                    localStorage.setItem(`sidebar-${menu.id}`, 'false'); // Save the state as collapsed
+                    sessionStorage.setItem(`sidebar-${menu.id}`, 'false'); // Save the state as collapsed
                 });
             });
         });
-    </script>
+</script>
 
     <!--Javascript to customize syntax highlighting to highlight elements unrecognized by prism.js-->
     <script>
@@ -288,11 +299,18 @@
                 updatedhtml = updatedhtml.replace(/#lang scheme/g, '<span class="black">#lang scheme</span>');
                 updatedhtml = updatedhtml.replace(/scheme-traductor\/scheme-traductor/g, '<span class="black">scheme-traductor/scheme-traductor</span>');
                 updatedhtml = updatedhtml.replace(/nno hay un número máximo/g, '<span class="red">. . no hay un número máximo</span>');
+                updatedhtml = updatedhtml.replace(/menosDDAError/g, '<span class="red">... /\../\../\Program Files/\Racket/\collects/\scheme-traductor/\err-chks.rkt:17:11:<br>  menos: desajuste de aridad; <br>  el número esperado de argumentos no coincide con el número dado <br>  esperado: al menos 1 <br>  dado: 0</span>');
+                updatedhtml = updatedhtml.replace(/divDDAError/g, '<span class="red">... /\../\../\Program Files/\Racket/\collects/\scheme-traductor/\err-chks.rkt:17:11:<br>   div: desajuste de aridad; <br>  el número esperado de argumentos no coincide con el número dado <br>  esperado: al menos 1 <br>  dado: 0</span>');
+                updatedhtml = updatedhtml.replace(/divDPCError/g, '<span class="red">... /\../\../\Program Files/\Racket/\collects/\scheme-traductor/\err-chks.rkt:53:97:<br>   div: división por cero</span>');
+                updatedhtml = updatedhtml.replace(/ldcVDCError/g, '<span class="red">... /\../\../\Program Files/\Racket/\collects/\scheme-traductor/\err-chks.rkt:41:10:<br>  longitud-de-cadena: violación de contrato <br>  esperado: cadena <br>  dado: 4 <br>  error en: 4, se espera una cadena ');
+                updatedhtml = updatedhtml.replace(/resVDCError/g, '<span class="red">... /\../\../\Program Files/\Racket/\collects/\scheme-traductor/\err-chks.rkt:45:10:<br>  res: violación de contrato <br>  esperado: (cualquiera, al menos 1) <br>  dado: () <br>  error en: (), se espera una lista no vacía ');
+                updatedhtml = updatedhtml.replace(/priDDAError/g, '<span class="red">... /\../\../\Program Files/\Racket/\collects/\scheme-traductor/\err-chks.rkt:28:8:<br>  pri: desajuste de aridad; <br>  el número esperado de argumentos no coincide con el número dado <br>  esperado: 1 <br>  dado: 0</span>');
                 updatedhtml = updatedhtml.replace(/número-máximo/g, '<span class="identifier">número-máximo</span>');
 
                 codeElement.innerHTML = updatedhtml;
             });
-        });
+        }); 
+       
 
     </script>
 

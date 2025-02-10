@@ -20,23 +20,29 @@
         </div>
 
         <div>
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic;"></p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(más x ...) → número</strong></p>
+           <p style=" text-indent: 70px; margin-bottom:2px;">x: número</p>
        </div>
 
         <pre>
              <span class="large">     
-                desc 
+                devuelve la suma de los x, agregando de manera pareada de izquierda a derecha. si no se proporcionan argumentos, el resultado es 0
              </span>
 <span class="bold" style="font-size:18px">
        ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+   g-t (más 1 2)
+   g-t 3
 
+   g-t (más 5 4 3 2 1)
+   g-t 15
 
-         </code></pre>
+   g-t (más 1.5 2.5)
+   g-t 4.0
+
+   g-t (más)
+   g-t 0    </code></pre>
 
     </div>
 
@@ -50,22 +56,36 @@
         </div>
 
         <div>
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic;"></p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(menos z) → número</strong></p>
+             <p style=" text-indent: 70px; margin-bottom:2px;"> z : número</p> 
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(menos z w ...) → número</strong></p>
+             <p style=" text-indent: 70px; margin-bottom:2px;">  z : número</p> 
+             <p style=" text-indent: 70px; margin-bottom:2px;">w : número</p> 
        </div>
 
         <pre>
              <span class="large">     
-                desc 
+                cuando no se proporcionan w, devuelve (menos 0 z). de lo contrario, devuelve la resta de los w de z, operando de manera pareada de izquierda 
+                 a derecha. se requiere al menos 1 argumento
              </span>
 <span class="bold" style="font-size:18px">
        ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+   g-t (menos 2)
+   g-t -2
 
+   g-t (menos 2 3)
+   g-t -1
 
+   g-t (menos 5 2 1)
+   g-t 4
+
+   g-t (menos 1.5 0.5)
+   g-t 1.0
+
+   g-t (menos)
+    menosDDAError
          </code></pre>
 
     </div>
@@ -80,21 +100,32 @@
         </div>
 
         <div>
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic;"></p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(mult z ...) → número</strong></p>
+               <p style=" text-indent: 70px; margin-bottom:2px;">  z : número</p> 
        </div>
 
         <pre>
              <span class="large">     
-                desc 
+                devuelve el producto de los z, multiplicando de manera pareada de izquierda a derecha. si no se proporcionan argumentos, el resultado es 1 
              </span>
 <span class="bold" style="font-size:18px">
        ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+   g-t (mult 2)
+   g-t 2
 
+   g-t (mult 2 3)
+   g-t 6
+
+   g-t (mult 1 2 3 4 5)
+   g-t 120
+
+   g-t (mult 1.5 2)
+   g-t 3.0
+
+   g-t (mult)
+   g-t 1
 
          </code></pre>
 
@@ -110,22 +141,41 @@
         </div>
 
         <div>
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic;"></p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(div z) → número</strong></p>
+             <p style=" text-indent: 70px; margin-bottom:2px;"> z : número</p> 
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(div z w ...) → número</strong></p>
+             <p style=" text-indent: 70px; margin-bottom:2px;">  z : número</p> 
+             <p style=" text-indent: 70px; margin-bottom:2px;">w : número</p> 
        </div>
 
         <pre>
              <span class="large">     
-                desc 
+                cuando no se proporcionan w, devuelve (div 1 z). de lo contrario, devuelve la división de z entre los w, operando de manera pareada de izquierda 
+                 a derecha. se requiere al menos un argumento
+
+                 si z es 0 exacto y ningún w es 0 exacto, el resultado es 0 exacto. si cualquier w es 0 exacto, se lanza la excepción <i>división por cero</i>
              </span>
 <span class="bold" style="font-size:18px">
        ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+   g-t (div 4)
+   g-t 1/4
 
+   g-t (div 4 2)
+   g-t 2
 
+   g-t (div 30 3 5)
+   g-t 2
+
+   g-t (div 4.0 1.3)
+   g-t 3.0769230769230766
+
+   g-t (div 4 0)
+   divDPCError
+
+   g-t (div) 
+   divDDAError
          </code></pre>
 
     </div>
@@ -140,23 +190,25 @@
         </div>
 
         <div>
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic;"></p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
+            <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(cociente n m ...) → número entero</strong></p>
+             <p style=" text-indent: 70px; margin-bottom:2px;">  n : número entero</p> 
+             <p style=" text-indent: 70px; margin-bottom:2px;">m : número entero</p> 
        </div>
 
         <pre>
              <span class="large">     
-                desc 
+                devuelve (<a class="link" href="#truncar">truncar</a> (<a class="link" href="#div">div</a> n m))
              </span>
 <span class="bold" style="font-size:18px">
        ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+    g-t (cociente 10 3)
+    g-t 3
 
-
-         </code></pre>
+    g-t (cociente -10.0 3)
+    g-t -3
+        </code></pre>
 
     </div>
 
@@ -170,21 +222,33 @@
         </div>
 
         <div>
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic;"></p> 
-           <p style=" text-indent: 50px; margin-bottom:2px;"><strong></strong></p>
-             <p style="text-indent:75px; font-style:italic; margin-bottom:2px;"></p>
+           <p style=" text-indent: 50px; margin-bottom:2px;"><strong>(residuo n m ...) → número entero</strong></p>
+             <p style=" text-indent: 70px; margin-bottom:2px;">  n : número entero</p> 
+             <p style=" text-indent: 70px; margin-bottom:2px;">m : número entero</p> 
        </div>
 
         <pre>
              <span class="large">     
-                desc 
+                devuelve q con el mismo signo que n, de tal manera que (val-abso q) esté entre 0 <i>(inclusivo)</i> y (val-abso q) <i>(exlusivo)</i> y  
+                 (<a class="link" href="#más">más</a> q (<a class="link" href="#mult">mult</a> m (<a class="link" href="#cociente">cociente</a> n m))) sea igual a n
+
+                 si m es exacto 0, se lanza la excepción <i>división por cero</i>
              </span>
 <span class="bold" style="font-size:18px">
        ejemplos:  </span>
 </pre>
    <pre><code class="language-scheme">
+    g-t (residuo 10 3)
+    g-t 1
 
+   g-t (residuo -10.0 3)
+   g-t -1.0
+
+   g-t (residuo 10.0 -3)
+   g-t 1.0
+
+   g-t (residuo -10 -3)
+   g-t -1
 
          </code></pre>
 
