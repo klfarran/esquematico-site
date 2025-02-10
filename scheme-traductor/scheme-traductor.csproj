@@ -14,7 +14,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>scheme_traductor</RootNamespace>
     <AssemblyName>scheme-traductor</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44356</IISExpressSSLPort>
@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,10 +52,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -83,6 +82,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -105,6 +105,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Aritmética.aspx" />
+    <Content Include="Cadenas.aspx" />
+    <Content Include="Comparaciones.aspx" />
+    <Content Include="Definiciones.aspx" />
+    <Content Include="Definitions.aspx" />
     <Content Include="Descargar.aspx" />
     <Content Include="Download.aspx" />
     <Content Include="Documentación.aspx" />
@@ -126,10 +131,14 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Documentation.aspx" />
+    <Content Include="EmpezarAquí.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="images\lambdawhite.png" />
     <Content Include="Inicio.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Listas.aspx" />
+    <Content Include="Potenciales.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -159,6 +168,8 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="English.Master" />
+    <Content Include="Español.Master" />
+    <None Include="Properties\PublishProfiles\esquematico - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -186,8 +197,8 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="Español.Master" />
     <Content Include="sitestyles.css" />
+    <Content Include="Tipos.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -195,6 +206,41 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Aritmética.aspx.cs">
+      <DependentUpon>Aritmética.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aritmética.aspx.designer.cs">
+      <DependentUpon>Aritmética.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cadenas.aspx.cs">
+      <DependentUpon>Cadenas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cadenas.aspx.designer.cs">
+      <DependentUpon>Cadenas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comparaciones.aspx.cs">
+      <DependentUpon>Comparaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Comparaciones.aspx.designer.cs">
+      <DependentUpon>Comparaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Definiciones.aspx.cs">
+      <DependentUpon>Definiciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Definiciones.aspx.designer.cs">
+      <DependentUpon>Definiciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Definitions.aspx.cs">
+      <DependentUpon>Definitions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Definitions.aspx.designer.cs">
+      <DependentUpon>Definitions.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Descargar.aspx.cs">
       <DependentUpon>Descargar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -224,12 +270,26 @@
     <Compile Include="Documentation.aspx.designer.cs">
       <DependentUpon>Documentation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EmpezarAquí.aspx.cs">
+      <DependentUpon>EmpezarAquí.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpezarAquí.aspx.designer.cs">
+      <DependentUpon>EmpezarAquí.aspx</DependentUpon>
+    </Compile>
     <Compile Include="English.Master.cs">
       <DependentUpon>English.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="English.Master.designer.cs">
       <DependentUpon>English.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Español.Master.cs">
+      <DependentUpon>Español.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Español.Master.designer.cs">
+      <DependentUpon>Español.Master</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -248,20 +308,34 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Español.Master.cs">
-      <DependentUpon>Español.Master</DependentUpon>
+    <Compile Include="Listas.aspx.cs">
+      <DependentUpon>Listas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Español.Master.designer.cs">
-      <DependentUpon>Español.Master</DependentUpon>
+    <Compile Include="Listas.aspx.designer.cs">
+      <DependentUpon>Listas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Potenciales.aspx.cs">
+      <DependentUpon>Potenciales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Potenciales.aspx.designer.cs">
+      <DependentUpon>Potenciales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tipos.aspx.cs">
+      <DependentUpon>Tipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tipos.aspx.designer.cs">
+      <DependentUpon>Tipos.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

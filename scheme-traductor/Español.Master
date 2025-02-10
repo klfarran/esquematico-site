@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Español.Master.cs" Inherits="scheme_traductor.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Español.master.cs" Inherits="scheme_traductor.Español" %>
 
 <!DOCTYPE html>
 
@@ -14,6 +14,12 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!--prism.js for formatting-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-scheme.min.js"></script>
+    <script src="prism.js"></script>
 
 </head>
 <body>
@@ -38,10 +44,13 @@
             </Scripts>
         </asp:ScriptManager>
 
-      
-       <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #728FCE;">
+      <!-- Navbar -->
+       <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #627ABC;">
          <div class="container">
-          <a class="navbar-brand" runat="server" href="~/Inicio">eschemántico!</a>
+          <a class="navbar-brand" runat="server" href="~/Inicio">
+              <img src="images/lambdawhite.png" alt="Logo" style="width: 30px; height: auto; margin-right:20px; margin-left:-45px;">
+              esquemático!
+          </a>
           
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav w-100">
@@ -55,16 +64,256 @@
           </div>
          </div>
        </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+            <div class="dropdown">
+             <!-- Triangle toggle button -->
+              <a class="sdbar triangle nav-link" data-bs-toggle="collapse" href="#definitionsSubmenu" aria-expanded="false" 
+                aria-controls="definitionsSubmenu"> ▼ </a>
+             <!-- Link with 'sdbar nav-link' class -->
+             <a class="sdbar nav-link" runat="server" href="~/Definiciones">definiciones</a>
+            </div>
+               <ul class="nav flex-column ms-3 collapse" id="definitionsSubmenu">
+                <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definiciones#definir">definir</a></li>
+                <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definiciones#rastrear">rastrear</a></li>
+                <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definiciones#rastrear-definir">rastrear-definir</a></li>
+                <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definiciones#sea">sea</a></li>
+                <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definiciones#sea*">sea*</a></li>
+                <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Definiciones#¡establezca!">¡establezca!</a></li>
+              </ul>
+            </li>
+
+        <li class="nav-item">
+             <div class="dropdown">
+              <a class="sdbar triangle nav-link" data-bs-toggle="collapse" href="#comparisonSubmenu" aria-expanded="false" 
+                aria-controls="comparisonSubmenu"> ▼ </a>
+             <a class="sdbar nav-link" runat="server" href="~/Comparaciones">comparación e igualdad</a>
+            </div>
+           <ul class="nav flex-column ms-3 collapse" id="comparisonSubmenu">
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Comparaciones#¿igual%3F">¿igual?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Comparaciones#¿igv%3F">¿igv?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Comparaciones#¿ig%3F">¿ig?</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+             <div class="dropdown">
+              <a class="sdbar triangle nav-link" data-bs-toggle="collapse" href="#conditionalsSubmenu" aria-expanded="false" 
+                aria-controls="conditionalsSubmenu"> ▼ </a>
+             <a class="sdbar nav-link" runat="server" href="~/Potenciales">potenciales</a>
+            </div>
+          <ul class="nav flex-column ms-3 collapse" id="conditionalsSubmenu">
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#cierto">cierto</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#falso">falso</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#si">si</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#condición">condición</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#sino">sino</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#y">y</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#o">o</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#¿falso%3F">¿falso?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Potenciales#¿cierto%3F">¿cierto?</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+            <div class="dropdown">
+              <a class="sdbar triangle nav-link" data-bs-toggle="collapse" href="#numericsSubmenu" aria-expanded="false" 
+                aria-controls="numericsSubmenu"> ▼ </a>
+             <a class="sdbar nav-link" runat="server" href="~/Aritmética">aritmética</a>
+            </div>
+          <ul class="nav flex-column ms-3 collapse" id="numericsSubmenu">
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#más">más</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#menos">menos</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#mult">mult</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#div">div</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#cociente">cociente</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#residuo">residuo</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#cociente/residuo">cociente/residuo</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#módulo">módulo</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#redondear">redondear</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#truncar">truncar</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#signo">signo</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#menos-de">menos-de</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#más-de">más-de</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#raíz-cuadrada">raíz-cuadrada</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#expo">expo</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#máx">máx</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#mín">mín</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#val-abso">val-abso</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número%3F">¿número?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número-entero%3F">¿número-entero?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿cero%3F">¿cero?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿positivo%3F">¿positivo?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿negativo%3F">¿negativo?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número-par%3F">¿número-par?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Aritmética#¿número-impar%3F">¿número-impar?</a></li>
+          </ul>
+        </li>
+
+          <li class="nav-item">
+            <div class="dropdown">
+              <a class="sdbar triangle nav-link" data-bs-toggle="collapse" href="#stringsSubmenu" aria-expanded="false" 
+                aria-controls="stringsSubmenu"> ▼ </a>
+             <a class="sdbar nav-link" runat="server" href="~/Cadenas">cadenas</a>
+            </div>
+          <ul class="nav flex-column ms-3 collapse" id="stringsSubmenu">
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#longitud-de-cadena">longitud-de-cadena</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#subcadena">subcadena</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#concatenar-cadena">concatenar-cadena</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#¿cadena%3F">¿cadena?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Cadenas#¿inmutable%3F">¿inmutable?</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+            <div class="dropdown">
+              <a class="sdbar triangle nav-link" data-bs-toggle="collapse" href="#typesSubmenu" aria-expanded="false" 
+                aria-controls="typesSubmenu"> ▼ </a>
+             <a class="sdbar nav-link" runat="server" href="~/Tipos">tipos</a>
+            </div>
+          <ul class="nav flex-column ms-3 collapse" id="typesSubmenu">
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿átomo%3F">¿átomo?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿símbolo%3F">¿símbolo?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿carácter%3F">¿carácter?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿booleano%3F">¿booleano?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿cadena%3F">¿cadena?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿inmutable%3F">¿inmutable?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿lista%3F">¿lista?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Tipos#¿par%3F">¿par?</a></li>
+          </ul>
+        </li>
+
+          <li class="nav-item">
+            <div class="dropdown">
+              <a class="sdbar triangle nav-link" data-bs-toggle="collapse" href="#listasSubmenu" aria-expanded="false" 
+                aria-controls="listasSubmenu"> ▼ </a>
+             <a class="sdbar nav-link" runat="server" href="~/Listas">listas</a>
+            </div>
+          <ul class="nav flex-column ms-3 collapse" id="listasSubmenu">
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#combinar">combinar</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#pri">pri</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#res">res</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#longitud">longitud</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#juntar">juntar</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#lista">lista</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#¿lista%3F">¿lista?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#¿par%3F">¿par?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#¿nulo%3F">¿nulo?</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#prri">prri</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#prrri">prrri</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#prrrri">prrrri</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#ress">ress</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#resss">resss</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#ressss">ressss</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#pres">pres</a></li>
+            <li class="sdbar nav-item"><a class="nav-link" runat="server" href="~/Listas#resp">resp</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+
       
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p> <%: DateTime.Now.Year %> - eschemántico!</p>
+                <p> <%: DateTime.Now.Year %> - esquemático!</p>
             </footer>
         </div>
 
     </form>
+
+
+    <!--Javascript to remember the state of the sidebar when switching pages-->
+   <script>
+       document.addEventListener('DOMContentLoaded', function () {
+
+           // Check if the page has been loaded before in this session
+           if (!sessionStorage.getItem('sidebar-initialized')) {
+               // First load of the page in this session, reset sidebar state
+               sessionStorage.setItem('sidebar-initialized', 'true');
+
+               const sidebarMenus = document.querySelectorAll('.collapse');
+               sidebarMenus.forEach(menu => {
+                   // Collapse all menus on the first load of the page
+                   menu.classList.remove('show');
+                   menu.previousElementSibling.setAttribute('aria-expanded', 'false');
+               });
+           } else {
+               // Load the saved state of each menu from sessionStorage
+               const sidebarMenus = document.querySelectorAll('.collapse');
+               sidebarMenus.forEach(menu => {
+                   const menuId = menu.id;
+                   const savedState = sessionStorage.getItem(`sidebar-${menuId}`);
+
+                   if (savedState === 'true') {
+                       menu.classList.add('show'); // Expand the menu if saved state is true
+                       menu.previousElementSibling.setAttribute('aria-expanded', 'true');
+                   } else if (savedState === 'false') {
+                       menu.classList.remove('show'); // Collapse the menu if saved state is false
+                       menu.previousElementSibling.setAttribute('aria-expanded', 'false');
+                   }
+               });
+           }
+
+            // Save the state of each menu when it is toggled
+            const sidebarMenus = document.querySelectorAll('.collapse');
+            sidebarMenus.forEach(menu => {
+                menu.addEventListener('shown.bs.collapse', function () {
+                    sessionStorage.setItem(`sidebar-${menu.id}`, 'true'); // Save the state as expanded
+                });
+
+                menu.addEventListener('hidden.bs.collapse', function () {
+                    sessionStorage.setItem(`sidebar-${menu.id}`, 'false'); // Save the state as collapsed
+                });
+            });
+        });
+</script>
+
+    <!--Javascript to customize syntax highlighting to highlight elements unrecognized by prism.js-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const codeElements = document.querySelectorAll('pre code');
+
+            codeElements.forEach(codeElement => {
+                const html = codeElement.innerHTML;
+
+                let updatedhtml = html.replace(/¿.*\?/g, '<span class="identifier">$&</span>'); //Anything that starts with ¿ and ends with ? is an identifier
+                updatedhtml = updatedhtml.replace(/<span class="token function">definir<\/span>/g, '<span class="keyw">definir</span>');
+                updatedhtml = updatedhtml.replace(/'/g, '<span class="symb">\'</span>');
+                updatedhtml = updatedhtml.replace(/cierto/g, '<span class="bool">cierto</span>');
+                updatedhtml = updatedhtml.replace(/falso/g, '<span class="bool">falso</span>');
+                updatedhtml = updatedhtml.replace(/lista/g, '<span class="identifier">lista</span>');
+                updatedhtml = updatedhtml.replace(/aaquí/g, '<span class="identifier">aquí</span>');
+                updatedhtml = updatedhtml.replace(/g-t/g, '<span class="g-t">></span>');
+                updatedhtml = updatedhtml.replace(/xx/g, '<span class="identifier">x</span>');
+                updatedhtml = updatedhtml.replace(/yy/g, '<span class="identifier">y</span>');
+                updatedhtml = updatedhtml.replace(/zz/g, '<span class="identifier">z</span>');
+                updatedhtml = updatedhtml.replace(/l-t/g, '<span class="l-t"><</span>');
+                updatedhtml = updatedhtml.replace(/#lang scheme/g, '<span class="black">#lang scheme</span>');
+                updatedhtml = updatedhtml.replace(/scheme-traductor\/scheme-traductor/g, '<span class="black">scheme-traductor/scheme-traductor</span>');
+                updatedhtml = updatedhtml.replace(/nno hay un número máximo/g, '<span class="red">. . no hay un número máximo</span>');
+                updatedhtml = updatedhtml.replace(/menosDDAError/g, '<span class="red">... /\../\../\Program Files/\Racket/\collects/\scheme-traductor/\err-chks.rkt:17:11:<br>  menos: desajuste de aridad; <br>  el número esperado de argumentos no coincide con el número dado <br>  esperado: al menos 1 <br>  dado: 0</span>');
+                updatedhtml = updatedhtml.replace(/divDDAError/g, '<span class="red">... /\../\../\Program Files/\Racket/\collects/\scheme-traductor/\err-chks.rkt:17:11:<br>   div: desajuste de aridad; <br>  el número esperado de argumentos no coincide con el número dado <br>  esperado: al menos 1 <br>  dado: 0</span>');
+                updatedhtml = updatedhtml.replace(/divDPCError/g, '<span class="red">... /\../\../\Program Files/\Racket/\collects/\scheme-traductor/\err-chks.rkt:53:97:<br>   div: división por cero</span>');
+                updatedhtml = updatedhtml.replace(/ldcVDCError/g, '<span class="red">... /\../\../\Program Files/\Racket/\collects/\scheme-traductor/\err-chks.rkt:41:10:<br>  longitud-de-cadena: violación de contrato <br>  esperado: cadena <br>  dado: 4 <br>  error en: 4, se espera una cadena ');
+                updatedhtml = updatedhtml.replace(/resVDCError/g, '<span class="red">... /\../\../\Program Files/\Racket/\collects/\scheme-traductor/\err-chks.rkt:45:10:<br>  res: violación de contrato <br>  esperado: (cualquiera, al menos 1) <br>  dado: () <br>  error en: (), se espera una lista no vacía ');
+                updatedhtml = updatedhtml.replace(/priDDAError/g, '<span class="red">... /\../\../\Program Files/\Racket/\collects/\scheme-traductor/\err-chks.rkt:28:8:<br>  pri: desajuste de aridad; <br>  el número esperado de argumentos no coincide con el número dado <br>  esperado: 1 <br>  dado: 0</span>');
+                updatedhtml = updatedhtml.replace(/número-máximo/g, '<span class="identifier">número-máximo</span>');
+
+                codeElement.innerHTML = updatedhtml;
+            });
+        }); 
+       
+
+    </script>
+
 </body>
 </html>
+

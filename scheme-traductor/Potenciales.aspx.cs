@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace scheme_traductor
 {
-    public partial class Español : System.Web.UI.MasterPage
+    public partial class Potenciales : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Page.Title = "esquemático!";
+
         }
     }
 }

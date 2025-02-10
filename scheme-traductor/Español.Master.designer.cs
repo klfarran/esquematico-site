@@ -11,7 +11,7 @@ namespace scheme_traductor
 {
 
 
-    public partial class SiteMaster
+    public partial class Español
     {
 
         /// <summary>
