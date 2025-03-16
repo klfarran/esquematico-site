@@ -61,6 +61,7 @@
               <a class="nav-item nav-link" runat="server" href="https://github.com/klfarran/scheme-traductor.git">github</a>
               <a class="nav-item nav-link" runat="server" href="https://racket-lang.org/">dr racket</a>
               <a class="nav-item nav-link" runat="server" href="https://docs.racket-lang.org/guide/">original racket documentation</a>
+              <a class="nav-item nav-link" runat="server" href="~/Port">port esquemático</a>
               <a class="nav-item nav-link ms-auto" runat="server" href="~/Download">download</a>
               <a class="nav-item nav-link active ms-4" runat="server" style="border: 2px solid rgba(255, 255, 255, 0.8); border-radius: 10px; padding: 5px 10px;" href="~/Inicio">español</a>
              </div>   
