@@ -28,7 +28,7 @@ tenga en cuenta que para poder utilizar las definiciones proporcionadas en esque
 dos líneas en la parte superior de cada programa: </pre>
     <pre><code class="language-scheme">
     #lang scheme
-    (require scheme-traductor/scheme-traductor)
+    (require esquematico/base)
       </code></pre>
 
          <pre style="font-size: 20px;">

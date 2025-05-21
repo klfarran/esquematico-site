@@ -138,6 +138,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Listas.aspx" />
+    <Content Include="Port.aspx" />
     <Content Include="Potenciales.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -314,6 +315,13 @@
     </Compile>
     <Compile Include="Listas.aspx.designer.cs">
       <DependentUpon>Listas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Port.aspx.cs">
+      <DependentUpon>Port.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Port.aspx.designer.cs">
+      <DependentUpon>Port.aspx</DependentUpon>
     </Compile>
     <Compile Include="Potenciales.aspx.cs">
       <DependentUpon>Potenciales.aspx</DependentUpon>

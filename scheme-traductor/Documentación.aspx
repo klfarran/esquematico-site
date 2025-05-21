@@ -16,11 +16,12 @@
     <div style="margin-left: 50px;">
       <p>para obtener más información sobre una definición, haga clic en ella usando la barra lateral de la izquierda</p>
       <p>tenga en cuenta que para poder utilizar las definiciones proporcionadas en esquemático, es obligatorio que tenga estas dos líneas en la parte superior de cada programa: </p>
+      <p>siguiendo las instrucciones de instalación, estas dos líneas deberían aparecer automáticamente</p>
     </div>
 
       <pre><code class="language-scheme">
     #lang scheme
-    (require scheme-traductor/scheme-traductor)
+    (require esquematico/base)
       </code></pre>
     
 
