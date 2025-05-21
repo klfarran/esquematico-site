@@ -52,14 +52,14 @@
     (definir <span class="token function">¿más-5?</span>
       (lambda (lista)
          (condición
-         ((más-de (longitud lista) 5) 'cierto)
+         ((más-de (longitud lista) 5) 'verdadero)
           (sino 'falso) ))) 
  
     (¿más-5? '(1 2 3)) 
     g-t falso
 
     (¿más-5? '(1 2 3 4 5 6)) 
-    g-t cierto
+    g-t verdadero
       </code></pre>
 
    </div>

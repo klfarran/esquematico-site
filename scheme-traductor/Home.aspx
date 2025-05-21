@@ -24,7 +24,7 @@
     in order to use the procedures available with <i>esquemático</i>, these two lines must appear at the top of every .rkt file: </pre>  
     <pre><code class="language-scheme">
     #lang scheme
-    (require scheme-traductor/scheme-traductor) 
+    (require esquematico/base) 
     </code></pre>
 
            <pre style="font-size: 20px;"> 
@@ -33,7 +33,7 @@
      procedure <i>define</i> is 'definir', used in the same manner as <i>define</i> would be, like so: </pre>
         <pre><code class="language-scheme">
   g-t (definir replacee ; replace every occurence of 'x' in the list 'lis' with 'z'
-    (lambda (liss xx z)
+     (lambda (liss xx z)
       (condición
         ((¿nulo? liss) '())
         ((y (¿átomo? (pri liss)) (¿ig? (pri liss) xx)) (combinar zz (replacee(res liss) xx zz)))

@@ -24,7 +24,7 @@
         abre DrRacket, y asegúrese de que estas dos líneas aparezcan en la parte superior de su programa: </pre>
      <pre><code class="language-scheme">
     #lang scheme
-    (require scheme-traductor/scheme-traductor)
+    (require esquematico/base)
       </code></pre>
     <pre style="font-size: 20px;"> 
         ¡debajo de esas dos líneas es donde escribirá su primer programa!

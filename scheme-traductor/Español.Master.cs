@@ -11,7 +11,7 @@ namespace scheme_traductor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Page.Title = "esquemático!";
+            Page.Title = "&#161;esquemático!";
         }
     }
 }

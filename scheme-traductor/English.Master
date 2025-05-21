@@ -62,7 +62,7 @@
               <a class="nav-item nav-link" runat="server" href="https://racket-lang.org/">dr racket</a>
               <a class="nav-item nav-link" runat="server" href="https://docs.racket-lang.org/guide/">original racket documentation</a>
               <a class="nav-item nav-link" runat="server" href="~/Port">port esquemático</a>
-              <a class="nav-item nav-link ms-auto" runat="server" href="~/Download">download</a>
+              <a class="nav-item nav-link ms-auto" runat="server" href="~/Download">install</a>
               <a class="nav-item nav-link active ms-4" runat="server" style="border: 2px solid rgba(255, 255, 255, 0.8); border-radius: 10px; padding: 5px 10px;" href="~/Inicio">español</a>
              </div>   
           </div>
@@ -284,7 +284,7 @@
                 updatedhtml = updatedhtml.replace(/zz/g, '<span class="identifier">z</span>');
                 updatedhtml = updatedhtml.replace(/l-t/g, '<span class="l-t"><</span>');
                 updatedhtml = updatedhtml.replace(/#lang scheme/g, '<span class="black">#lang scheme</span>');
-                updatedhtml = updatedhtml.replace(/scheme-traductor\/scheme-traductor/g, '<span class="black">scheme-traductor/scheme-traductor</span>');
+                updatedhtml = updatedhtml.replace(/esquematico\/base/g, '<span class="black">esquematico/base</span>');
                 updatedhtml = updatedhtml.replace(/liss/g, '<span class="identifier">lis</span>');
                 updatedhtml = updatedhtml.replace(/replacee/g, '<span class="identifier">replace*</span>');
 

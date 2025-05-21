@@ -164,7 +164,7 @@
       <p>keep in mind that in order to use the spanish definitions provided in <i>esquemático!</i>, you must have these two lines at the top of every program: </p>
         <pre><code class="language-scheme">
   #lang scheme
-  (require scheme-traductor/scheme-traductor) 
+  (require esquematico/base) 
     </code></pre>
 
 

@@ -58,7 +58,7 @@
               <a class="nav-item nav-link" runat="server" href="~/Documentación">documentación</a>
               <a class="nav-item nav-link" runat="server" href="https://github.com/klfarran/scheme-traductor.git">github</a>
               <a class="nav-item nav-link" runat="server" href="https://racket-lang.org/">dr racket</a>
-              <a class="nav-item nav-link ms-auto" runat="server" href="~/Descargar">descargar</a>
+              <a class="nav-item nav-link ms-auto" runat="server" href="~/Descargar">instalar</a>
               <a class="nav-item nav-link active ms-4" runat="server" style="border: 2px solid rgba(255, 255, 255, 0.8); border-radius: 10px; padding: 5px 10px;" href="~/Home">english</a>
              </div>   
           </div>
@@ -288,6 +288,7 @@
                 updatedhtml = updatedhtml.replace(/<span class="token function">definir<\/span>/g, '<span class="keyw">definir</span>');
                 updatedhtml = updatedhtml.replace(/'/g, '<span class="symb">\'</span>');
                 updatedhtml = updatedhtml.replace(/cierto/g, '<span class="bool">cierto</span>');
+                updatedhtml = updatedhtml.replace(/verdadero/g, '<span class="bool">verdadero</span>');
                 updatedhtml = updatedhtml.replace(/falso/g, '<span class="bool">falso</span>');
                 updatedhtml = updatedhtml.replace(/lista/g, '<span class="identifier">lista</span>');
                 updatedhtml = updatedhtml.replace(/aaquí/g, '<span class="identifier">aquí</span>');

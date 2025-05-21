@@ -6,7 +6,7 @@
 
 <div class="main-content">
     <div class="jumbotron">
-        <h3 style="font-weight:600">descargar esquemático</h3>
+        <h3 style="font-weight:600">instalación de esquemático</h3>
     </div>
 <!--
     <pre style="font-size:18px">
